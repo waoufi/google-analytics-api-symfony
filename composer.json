@@ -3,7 +3,7 @@
   "type": "symfony-bundle",
   "description": "Google Analytics API v4 Symfony",
   "keywords": ["symfony","google","analytics","api","v4"],
-  "homepage": "https://github.com/mediafigaro/google-analytics-api-symfony",
+  "homepage": "https://github.com/waoufi/google-analytics-api-symfony",
   "license": "MIT",
   "authors": [
     {
@@ -15,6 +15,7 @@
   ],
   "require": {
     "google/apiclient": "^2.0",
+    "sensio/framework-extra-bundle": "^5.2",
     "symfony/framework-bundle": ">=2.3",
     "symfony/twig-bundle": ">=2.0",
     "twig/twig": ">=1.6"

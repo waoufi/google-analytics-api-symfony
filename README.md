@@ -1,33 +1,15 @@
 Google Analytics API v4 Symfony bundle
 ======================================
 
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/da6423cf-b198-402a-8d23-e82e7833f9f6/big.png)](https://insight.sensiolabs.com/projects/da6423cf-b198-402a-8d23-e82e7833f9f6)
-
-[![Latest Stable Version](https://poser.pugx.org/mediafigaro/google-analytics-api-symfony/v/stable)](https://packagist.org/packages/mediafigaro/google-analytics-api-symfony)
-[![Total Downloads](https://poser.pugx.org/mediafigaro/google-analytics-api-symfony/downloads)](https://packagist.org/packages/mediafigaro/google-analytics-api-symfony)
-[![Latest Unstable Version](https://poser.pugx.org/mediafigaro/google-analytics-api-symfony/v/unstable)](https://packagist.org/packages/mediafigaro/google-analytics-api-symfony)
-[![License](https://poser.pugx.org/mediafigaro/google-analytics-api-symfony/license)](https://packagist.org/packages/mediafigaro/google-analytics-api-symfony)
-[![Monthly Downloads](https://poser.pugx.org/mediafigaro/google-analytics-api-symfony/d/monthly)](https://packagist.org/packages/mediafigaro/google-analytics-api-symfony)
-[![Daily Downloads](https://poser.pugx.org/mediafigaro/google-analytics-api-symfony/d/daily)](https://packagist.org/packages/mediafigaro/google-analytics-api-symfony)
-[![composer.lock](https://poser.pugx.org/mediafigaro/google-analytics-api-symfony/composerlock)](https://packagist.org/packages/mediafigaro/google-analytics-api-symfony)
-
 # Use
 
-At MEDIA.figaro http://media.figaro.fr, the advertising department of the french newspaper Le Figaro and part of the Figaro Group (CCM Benchmark), we use this bundle to monitor our digital platforms with Google Analytics. 
+This is a fork of [mediafigaro/google-analytics-api-symfony](https://github.com/mediafigaro/google-analytics-api-symfony)
 
-It's a simple package that wraps the Google Analytics API version 4, and that gives you all the information to go straight to the point of getting some main metrics from GA.
-
-To be able to use it, you have to setup a project on Google Console for Google Analytics, get the json key, then configure this package by setting the path for it. You'll have to add the developer email defined into the Google Console to the GA views to authorize it, otherwise the view won't be accessible through the API. 
-
-You can use the debug routes to go live and test a profile (ex id : 111111111, here with [Docker](https://github.com/mediafigaro/docker-symfony)) :
-
-http://symfony.dev/app_dev.php/analytics-api/111111111 
-
-![debug](doc/debug.png)
+You can refer to their doc, but also, to the well written doc of [spatie/laravel-analytics](https://github.com/spatie/laravel-analytics) (which explains how to get through Google Analytics account configuration)
 
 # Installation
 
-    composer require mediafigaro/google-analytics-api-symfony
+    composer require waoufi/google-analytics-api-symfony
     
 without Flex, add to /app/AppKernel.php :
 
@@ -37,6 +19,12 @@ without Flex, add to /app/AppKernel.php :
     ];
 
 # Versions
+
+## 1.3.2
+Composer: added missing requirement to sensio/framework-extra-bundle
+
+## 1.3.1
+Update package composer name & author
 
 ## 1.3
 
@@ -92,7 +80,7 @@ Symfony 4 simple adaptation with a public service and a new public method that t
 
     getDataDateRangeMetricsDimensions($viewId,$dateStart,$dateEnd,$metrics='sessions',$dimensions=null,$sorting=null)
 
-Query explorer https://ga-dev-tools.appspot.com/query-explorer/ to build your query.
+[Query explorer](https://ga-dev-tools.appspot.com/query-explorer/) to build your query.
 
 $viewId : https://developers.google.com/analytics/devguides/reporting/core/v3/reference#ids
 
